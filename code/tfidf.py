@@ -13,14 +13,14 @@ for docid in range(1, docnum+1):
         print('Document ' + str(docid)  + ' read')
 
 
-doc_vectors = vectorizer.fit_transform(corpus)
+vectorizer.fit(corpus)
 
 print('Fit success.')
 with open('vectorizer.dump', 'wb') as vfile:
     pickle.dump(vectorizer, vfile)
 
-with open('doc_vectors.pickle', 'wb') as docvfile:
-    pickle.dump(doc_vectors, docvfile)
+#with open('doc_vectors_with_new_vocabulary.pickle', 'wb') as docvfile:
+    #pickle.dump(doc_vectors, docvfile)
 
 
 #tfidf = vectorizer.fit_transform(corpus)

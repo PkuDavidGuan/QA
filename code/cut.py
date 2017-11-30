@@ -3,7 +3,10 @@ import jieba
 import jieba.posseg as pseg
 import re
 
-
+with open('titles.pickle.1', 'rb') as tfile:
+    titles = pickle.load(tfile)
+    for t in titles:
+        jieba.add_word(t)
 wikifile = 'wiki.txt'
 infile = open(wikifile, "r")
 titles = []

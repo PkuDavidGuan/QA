@@ -8,5 +8,6 @@ for docid in range(1, docnum+1):
             if word not in vocabulary2index_list:
                 vocabulary2index_list[word] = []
             vocabulary2index_list[word].append(docid)
+    print('Document ', docid, ' done.')
 with open('vocabulary2inverted_index.pickle', 'wb') as vfile:
     pickle.dump(vocabulary2index_list, vfile)
