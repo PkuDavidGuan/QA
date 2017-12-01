@@ -5,7 +5,13 @@ Learn the maxinum number of words in a question and the number of POS-tag in the
 import pickle
 import jieba
 import jieba.posseg as pseg
-from cut import update_jieba
+
+def update_jieba():
+    print("Update jieba...")
+    with open('titles.pickle.1', 'rb') as tfile:
+        titles = pickle.load(tfile)
+        for t in titles:
+            jieba.add_word(t, tag="wiki")
 
 def realword(f):
     flag = True
