@@ -3,10 +3,14 @@ import jieba
 import jieba.posseg as pseg
 import re
 
-with open('titles.pickle.1', 'rb') as tfile:
-    titles = pickle.load(tfile)
-    for t in titles:
-        jieba.add_word(t)
+def update_jieba():
+    print("Update jieba...")
+    with open('titles.pickle.1', 'rb') as tfile:
+        titles = pickle.load(tfile)
+        for t in titles:
+            jieba.add_word(t, tag="wiki")
+
+update_jieba()
 wikifile = 'wiki.txt'
 infile = open(wikifile, "r")
 titles = []
