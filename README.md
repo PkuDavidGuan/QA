@@ -11,4 +11,5 @@ This is the final project for `Web data mining class 2017 FALL-PKU`. We made a C
   - question2dict.py: build up a dict containing (question, answer) pairs.
   - vector2dict.py: build up a dict containing (Chinese word, word_vector) pairs.
   - answer_class.py: predict the answer's pos tag. 
+  - keyword.py: analyse the key word of the question.
 - results
