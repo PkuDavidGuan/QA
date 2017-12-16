@@ -1,5 +1,5 @@
 # _*_coding=utf-8_*_
-infile = open('vectorsw300l20.all', 'r')
+infile = open('Data/vectorsw300l20.all', 'r')
 lines = infile.readlines()
 word_to_vector_dict = {}
 for line in lines[1:]:
